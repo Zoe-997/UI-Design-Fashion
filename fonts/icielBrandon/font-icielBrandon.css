@@ -1,0 +1,5 @@
+@font-face {
+	font-family: 'icielBrandon';
+	src: url('./icielBrandonText-Bold.ttf') format('truetype'),
+		 url('./icielBrandonText-Bold.woff') format('woff');
+}

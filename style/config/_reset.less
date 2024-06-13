@@ -1,0 +1,114 @@
+@import './_mixin.less';
+
+* {
+	margin: 0;
+	padding: 0;
+
+	&:focus {
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+body,
+html {
+	font-family: 'Inter', sans-serif;
+}
+
+//button,link
+body{
+	button,
+	a ,
+	.btn-check:focus+.btn,
+	.btn:focus{
+		border: none;
+		.transition(all .3s ease);
+		text-decoration: none;
+	
+		&:focus,
+		&:hover,
+		&:focus-visible,
+		&:active,
+		&:visited {
+			text-decoration: none;
+			outline: none;
+			box-shadow: none;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+		}
+	}
+}
+
+
+tbody, td, tfoot, th, thead, tr{
+	border-width: 1px;
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	margin-bottom: 0;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+table {
+	th {
+		text-align: left;
+	}
+
+	.col {
+		width: auto;
+	}
+}
+
+@screen__xxs: 320px;
+@screen__xs-m: 360px;
+@screen__xs-l: 413px;
+@screen__xs: 480px;
+@screen__ss: 576px;
+@screen__s: 640px;
+@screen__m: 768px;
+@screen__xm: 992px;
+@screen__l: 1024px;
+@screen__xl-m: 1200px;
+@screen__xxl-m: 1440px;
+@screen__xxl-l: 1600px;
+@screen__xxl: 1920px;
+
+@media only screen and (min-width: 1600px){
+	.container {
+		max-width: 1600px;
+		padding: 0 30px;
+	}
+}
+@media only screen and (max-width: 1599px) {
+    body {
+        .container {
+            max-width: 100%;
+			padding: 0 32px;
+        }
+    }
+}
+@media only screen and (max-width: 1199px){
+	body {
+        .container {
+			padding: 0 15px;
+        }
+    }
+}

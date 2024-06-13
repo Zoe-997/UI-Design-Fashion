@@ -1,0 +1,223 @@
+body{
+    .page-policy{
+        color: #242424;      
+    }
+    .section-policy{
+        padding-bottom: 40px;
+        .breadcrumbs{
+            font-size: 13px;
+            font-weight: 400;
+            color: #999999;
+            padding-top: 15px ;
+            margin-bottom: 4px;
+            span{
+                padding: 0 5px;
+            }
+        }
+        .menu-mobile{
+            display: none;
+        }
+        .box-container{
+            padding: 0 30px;
+            & > .title{
+                font-size: 40px;
+                font-weight: bold;
+                line-height: 52.5px;
+                text-align: center;
+                font-family: @icielBrandon;
+                padding-bottom: 12px;
+                text-transform: uppercase;
+            }
+        }
+        .blog-bottom{
+            background-color: #F9F9F9;
+            padding: 32px 0;
+            .container{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                flex-wrap: wrap;
+                .toolbar-policy {
+                    max-width: 200px;
+                    & > .policy-label{
+                        font-size: 13px;
+                        line-height: 16px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        margin-bottom: 17px;
+                    }
+                    .item-news-list{
+                        font-size: 13px;
+                        line-height: 16px;
+                        font-weight: 400;
+                        margin-bottom: 16px;
+                        cursor: pointer;
+                        .item{
+                            text-decoration: none;
+                            color: #242424;
+                            display: block;
+                            span{
+                                border-bottom: 1px solid transparent;
+                            }
+                           
+                        }
+                        &.active,
+                        &:hover{
+                            .item{
+                                span{
+                                    border-color: #242424;
+                                }
+                            }
+                        }
+                    }
+                    .policy-options.mobile{
+                        display: none;
+                    }
+                }
+                #box-content{
+                    flex: 1;
+                    padding-left: 70px;
+                    .title{
+                        font-size: 26px;
+                        font-weight: 500;
+                        line-height: 31px;
+                        text-transform: uppercase;
+                        padding-bottom: 26px;
+                        border-bottom: 1px solid #CCCCCC;
+                    }
+                    .content{
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        padding-top: 30px;
+                        p,u{
+                            margin-bottom: 30px;
+                        }
+                        .level0{
+                            list-style: inside;
+                        }
+                        .level1{
+                            padding: 30px;
+                        }
+                        .text-large{
+                            text-transform: uppercase;
+                        }
+                        .container-border{
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #CCCCCC;
+                            &.level0{
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:1199px){
+    body {
+        .section-policy {
+            .box-container{
+                padding: 0 15px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:767px){
+    body {
+        .section-policy {
+            .menu-mobile{
+                display: block;
+            }
+            .select2-container{
+                width: 210px !important;
+            }
+            .select2-container--default{
+                .select2-selection--single {
+                    border: none;
+                    background-color: #F9F9F9;
+                }
+            } 
+            .blog-bottom{
+                .container{
+                    .toolbar-policy {
+                        margin-bottom: 30px;
+                        width: 100%;
+                        max-width: 100vw;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        .policy-label{
+                            display: none;
+                        }
+                        .item-news-list {
+                            display: none;
+                        }
+                    }
+                    #box-content{
+                        width: 100%;
+                        flex: auto;
+                        padding-left: 0
+                    }
+                }
+            } 
+        }
+    }
+}
+
+@media only screen and (max-width:575px){
+    body {
+        .section-policy {
+            .breadcrumbs{
+                display: none;
+            }
+            .select2-container--default{
+                .select2-selection--single {
+                    background-color: #ffffff;
+                }
+            } 
+            .box-container > .title {
+                font-size: 24px;
+                line-height: 31px;
+                padding: 20px 0 16px 0;
+
+            }
+            .blog-bottom{
+                padding-top: 0;
+                padding-bottom: 24px;
+                .container{
+                    max-width: 100%;
+                    .toolbar-policy {
+                        background-color: #fff;
+                        margin-left: -12px;
+                        margin-right: -12px;
+                        padding: 17px 0;
+                        width: 100vw;
+                        border-top: 1px solid  #EFEFEF;
+                        .policy-options{
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                    }
+                    #box-content{
+                        .title {
+                            font-size: 18px;
+                            line-height: 21px;
+                            padding-bottom: 16px;
+                        }
+                        .content{
+                            padding-top: 16px;
+                            font-size: 14px;
+                            line-height: 24px;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
